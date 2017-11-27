@@ -2,6 +2,8 @@
 
 React.jsの練習用リポジトリ
 
+React.jsを勉強するためにReact.jsを用いてアプリケーションを作成した。
+
 各ディレクトリには以下のアプリが実装してあります。
 
 ## hello_react
@@ -20,7 +22,7 @@ React.jsの練習用リポジトリ
 - (material-uiを使用している)
 
 ## separate_component
-- componentを親と子コンポーネントに分けた際の練習
+componentを親と子コンポーネントに分けた際の練習
 
 ## count_up
 ただ単純にひらすら数字を追加していくカウントアップ
