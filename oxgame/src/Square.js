@@ -1,17 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types';
 
-class Square extends Component {
-  render() {
-    return(
-      <button className="square">
-        {this.props.value}
-      </button>
-    );
-  }
+function Square(props){
+  return(
+    <button className="square" onClick={() => props.onClick()}>
+      {props.value}
+    </button>
+  );
 }
 Square.propTypes = {
-  value: PropTypes.number
+  value: PropTypes.string,
+  onClick: PropTypes.func
 }
 
 export default Square

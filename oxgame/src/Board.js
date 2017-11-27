@@ -1,14 +1,20 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import Square from './Square'
 
 class Board extends Component {
+  constructor() {
+    super();
+    this.state = {
+      squares: Array(9).fill(null),
+      xIsNext: true
+    }
+  }
   renderSquare(i){
-    return <Square value={i}/>;
+    return <Square value={this.props.squares[i]} onClick={() => this.props.onClick(i)} />;
   }
 
   render() {
-    const status = 'Next player: X';
-
     return (
       <div>
         <div className="status">{status}</div>
@@ -31,6 +37,9 @@ class Board extends Component {
     );
   }
 }
-
+Board.propTypes = {
+  squares: PropTypes.array,
+  onClick: PropTypes.func  
+}
 
 export default Board
